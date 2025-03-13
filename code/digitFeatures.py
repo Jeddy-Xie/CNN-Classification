@@ -52,12 +52,14 @@ def getFeature(x, featureType):
                         )
 
         features = np.reshape(features, [numOri * nx * ny, numImages])
-        normalizeFeatures = False
+        normalizeFeatures = True
         if normalizeFeatures:
-            #################################################
-            # TODO: Implement your normalization method here
-            #################################################
-            pass
+            #Square root scaling
+            features = np.sqrt(np.abs(features))
+
+            #L2 normalization
+            norms = np.sqrt(np.sum(features**2, axis=0, keepdims=True))
+            features = features / (norms + 1e-8) # Prevent division by zero
 
     return features
 
