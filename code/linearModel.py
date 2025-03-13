@@ -3,10 +3,10 @@ import numpy as np
 
 def train(x, y):
     param = {}
-    param["lambda"] = 0.001  # Regularization term
-    param["maxiter"] = 10  # Number of iterations
-    param["eta"] = 0.0001  # Learning rate
-    param["addBias"] = False  # Weather to add bias to features
+    param["lambda"] = 0.002  # Regularization term
+    param["maxiter"] = 1000  # Number of iterations
+    param["eta"] = 0.002  # Learning rate
+    param["addBias"] = True  # Whether to add bias to features
 
     return multiclassLRTrain(x, y, param)
 
