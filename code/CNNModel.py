@@ -6,7 +6,7 @@ class CNN(nn.Module):
         super(CNN, self).__init__()
         self.conv1 = nn.Conv2d(1, 5, 5)
         self.pool = nn.MaxPool2d(2, 2)
-        self.fc1 = nn.Linear(5*12*12,30)
+        self.fc1 = nn.Linear(5*12*13,30)
         self.fc2 = nn.Linear(30, 10)
 
 
