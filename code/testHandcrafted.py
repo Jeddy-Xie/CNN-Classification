@@ -21,7 +21,7 @@ for i in range(len(dataTypes)):
     dataType = dataTypes[i]
 
     # Load data
-    path = os.path.join("..", "data", dataType)
+    path = os.path.join("/Users/jeddyxie/Desktop/Computer Vision/HW3/Assignment", "data", dataType)
     data = utils.loadmat(path)
     print("+++ Loading dataset: {} ({} images)".format(dataType, data["x"].shape[2]))
 

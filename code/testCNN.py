@@ -22,23 +22,13 @@ for i in range(len(dataTypes)):
     path = os.path.join("..", "data", dataType)
     data = utils.loadmat(path)
     print("+++ Loading dataset: {} ({} images)".format(dataType, data["x"].shape[2]))
-
-    # Organize into numImages x numChannels x width x height
-    x = data["x"].transpose([2, 0, 1])
-    x = np.reshape(x, [x.shape[0], 1, x.shape[1], x.shape[2]])
-    y = data["y"]
-    # Convert data into torch tensors
-    x = torch.tensor(x).float()
-    y = torch.tensor(y).long()  # Labels are categorical
-
     # Define the model (implement this)
     model = CNN()
     model.train()
     # print(model)
 
-    #####################################################
-    # TODO: Define loss function and optimizer
-    #####################################################
+    criterion = nn.CrossEntropyLoss()
+    optimizer = optim.Adam(model.parameters(), lr=0.001)
 
     # Start training
     xTrain = x[data["set"] == trainSet, :, :, :]
