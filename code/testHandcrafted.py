@@ -15,7 +15,7 @@ featureTypes = ["pixel", "hog"]
 # Accuracy placeholder
 accuracy = np.zeros((len(dataTypes), len(featureTypes)))
 trainSet = 1
-testSet = 2
+testSet = 3
 
 for i in range(len(dataTypes)):
     dataType = dataTypes[i]
