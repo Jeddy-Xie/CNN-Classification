@@ -6,9 +6,14 @@ This project implements and evaluates Convolutional Neural Networks (CNNs) for c
 
 ## Dataset Variants
 The project evaluates the models on three MNIST dataset variants:
-1. Normal MNIST (baseline)
-2. Scaled MNIST (images scaled to 50% of original size)
-3. Jittered MNIST (images with random pixel jittering)
+1. Normal MNIST (baseline) - Original MNIST dataset without modifications
+2. Scaled MNIST - Pixel values are transformed using random scaling and offset:
+   - Each image I is modified as I ← aI + b
+   - Where a and b are random numbers ∈ [0, 1]
+   - This introduces random brightness and contrast variations
+3. Jittered MNIST - Images are randomly translated:
+   - Random translation within [-10, 10] pixels in both horizontal and vertical directions
+   - This simulates position variations in digit placement
 
 ## Model Architecture
 The CNN model implements the following architecture:
@@ -113,3 +118,5 @@ The model was trained using Bayesian optimization to find optimal hyperparameter
 - Matplotlib
 - Jupyter
 - scikit-learn
+- bayesian-optimization
+- utils (custom module for data loading and preprocessing)
