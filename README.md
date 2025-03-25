@@ -55,6 +55,8 @@ The model was trained using Bayesian optimization to find optimal hyperparameter
   - Number of Epochs: 92
   - Best Validation Accuracy: 96.77%
 
+![Normal MNIST Training Plots](code/training_plots_digits-normal.mat.png)
+
 ### Scaled MNIST
 - Test Accuracy: 95.20%
 - Best Hyperparameters:
@@ -63,6 +65,8 @@ The model was trained using Bayesian optimization to find optimal hyperparameter
   - Number of Epochs: 60
   - Best Validation Accuracy: 94.17%
 
+![Scaled MNIST Training Plots](code/training_plots_digits-scaled.mat.png)
+
 ### Jittered MNIST
 - Test Accuracy: 79.80%
 - Best Hyperparameters:
@@ -70,6 +74,8 @@ The model was trained using Bayesian optimization to find optimal hyperparameter
   - Learning Rate: 0.0042
   - Number of Epochs: 62
   - Best Validation Accuracy: 84.27%
+
+![Jittered MNIST Training Plots](code/training_plots_digits-jitter.mat.png)
 
 ## Key Findings
 1. The CNN model achieves high accuracy (>95%) on both normal and scaled MNIST datasets
